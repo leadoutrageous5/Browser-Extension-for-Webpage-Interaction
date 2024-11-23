@@ -1,0 +1,49 @@
+<!-- popup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebPage Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="top-bar">
+    <button id="analyze-button">Analyze</button>
+    <img id="settings-icon" src="icon.png" alt="Settings">
+  </div>
+
+  <div id="chat-container">
+    <!-- Chat messages will be appended here -->
+  </div>
+
+  <div id="input-area">
+    <input type="text" id="user-input" placeholder="Type your question here">
+    <button id="send-button">Send</button>
+  </div>
+
+  <div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Settings</h2>
+      <label for="api-key">API Key:</label>
+      <input type="text" id="api-key" placeholder="Enter your API Key">
+      <label for="model-select">Select Model:</label>
+      <select id="model-select">
+        <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+        <option value="gpt-4">GPT-4</option>
+      </select>
+      <!-- Add this inside the settings modal content -->
+      <label for="theme-select">Select Theme:</label>
+      <select id="theme-select">
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
+      </select>
+
+      <button id="save-settings">Save</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
